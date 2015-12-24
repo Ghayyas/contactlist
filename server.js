@@ -1,6 +1,4 @@
-/**
- * Created by Ghayyas on 9/5/2015.
- */
+
 var express = require('express');
 var app = express();
 var mongojs = require('mongojs');

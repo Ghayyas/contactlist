@@ -1,0 +1,51 @@
+<ion-view view-title="reply">
+  <ion-content>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search">
+      </label>
+    </div>
+    <div class="">
+
+      <div >
+
+        <div class="" ng-repeat=" posting in rev">
+      <div class="" ng-if="abc == posting.keygen ">
+          <div class="">
+            <a class="item item-avatar">
+              <img src="{{posting.image}}">
+              <h2>{{posting.name}}</h2>
+              <h2>{{posting.title}}</h2>
+              <p>{{posting.status}}</p>
+            </a>
+          </div>
+
+      </div>
+
+    </div>
+        <form ng-show="xyz" name="hashim">
+          <div class="list">
+            <label class="item item-input">
+              <input type="text" required="required" placeholder="Reply comment" ng-model="reply.aaa">
+            </label>
+            <button  class="button button-positive" ng-click="send()">Send</button>
+
+          </div>
+        </form>
+        <button ng-click="pro()" class="button button-dark">
+          Reply
+        </button>
+
+      </div>
+    </div>
+    <ul ng-repeat="msg in active">
+      <li>
+        {{msg.raza}}
+      </li>
+
+    </ul>
+  </ion-content>
+
+</ion-view>
+

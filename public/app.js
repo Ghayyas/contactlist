@@ -1,6 +1,4 @@
-/**
- * Created by Ghayyas on 9/5/2015.
- */
+
      var app = angular.module('app',[]);
     app.controller('myCtrl',function ($scope, $http) {
    var ref = function () {

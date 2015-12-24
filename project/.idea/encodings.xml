@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../new/myApp/www/js/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fesr/testing/www/js/controllers.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fesr/testing/www/js/services.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fesr/testing/www/templates/reply-tab.html" charset="UTF-8" />
+  </component>
+</project>

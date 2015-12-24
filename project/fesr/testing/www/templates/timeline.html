@@ -1,0 +1,32 @@
+<ion-view view-title="TimeLine">
+  <ion-content>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search">
+      </label>
+    </div>
+<!--
+default pic https://thebenclark.files.wordpress.com/2014/03/facebook-default-no-profile-pic.jpg
+-->
+    <div class="list">
+   <div class="padding">
+     <div class="" ng-repeat="status in rev track by $index">
+       <div class="list">
+       <a class="item item-avatar" href="#/reply-tab" ng-click="myFunc($index)">
+         <img src="{{status.image}}">
+         <h2>{{status.name}}</h2>
+         <p>{{status.status}}</p>
+       </a>
+         </div>
+
+     </div>
+
+   </div>
+
+    </div>
+
+  </ion-content>
+
+</ion-view>
+

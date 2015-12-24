@@ -1,0 +1,97 @@
+<style type="text/css">
+.my-animation.ng-enter {
+  /* standard transition code */
+  -webkit-transition: 0.2s linear all;
+  transition: 0.2s linear all;
+  opacity:0;
+}
+.my-animation.ng-enter-stagger {
+  /* this will have a 100ms delay between each successive leave animation */
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+
+  /* in case the stagger doesn't work then these two values
+   must be set to 0 to avoid an accidental CSS inheritance */
+  -webkit-transition-duration: 0s;
+  transition-duration: 0s;
+}
+.my-animation.ng-enter.ng-enter-active {
+  /* standard transition styles */
+  opacity:1;
+}
+
+</style>
+
+<ion-view hide-nav-bar="true">
+<ion-content style="text-align:center; padding-top:2%">
+      <br/>
+      <br/>
+      <br/>
+     
+     	<i style="font-size:64px; color: #586c82" class="icon ion-ios-flower-outline"></i>
+      <h1>{{ 'LOGIN_TITLE' | translate }}</h1>
+
+      <div class="bsrow">
+        <div class="col-sm-offset-1 col-sm-4">
+        <p>{{ 'INTERNAL_LOGIN_TEXT' | translate }}</p>
+          <div class="list list-inset">
+          <br/>
+          <label class="item item-input">
+            <input type="text" placeholder="{{'LOGIN_EMAIL_LABEL' | translate }}" ng-model="login.email" required>
+          </label>
+          <label class="item item-input">
+            <input type="password" placeholder="{{'LOGIN_PASSWORD_LABEL' | translate }}" ng-model="login.password" required>
+          </label>
+          </div>
+           <button class="button button-light button-block icon-left ion-log-in" ng-click="userLogin(login.email, login.password)">
+           {{ 'LOGIN_BUTTON' | translate }}
+           </button>
+           <p ng-if="login_message == 'invalid_password'">
+            {{'LOGIN_INVALID_PASSWORD' | translate }}
+           </p>
+           <p ng-if="login_message == 'invalid_user'">
+            {{'LOGIN_INVALID_USER' | translate }}
+           </p>
+
+        </div>
+
+      
+
+     
+       <div class="col-sm-offset-2 col-sm-4">
+       <br class="visible-xs">
+       <h1 class="visible-xs">OR</h1>
+        <p>{{ 'LOGIN_TEXT' | translate }}</p>
+  	      <div class="col-xs-B-12 my-animation" ng-if="device">
+  	      	<button class="button button-light button-block icon-left ion-social-facebook" ng-click="fbAppLogin()">
+  	        	{{ 'FACEBOOK_SIGNIN' | translate }}
+  	      	</button>
+        	</div>
+          
+          <div class="col-xs-B-12 my-animation" ng-if="!device">
+            <button class="button button-light button-block icon-left ion-social-facebook"ng-click="fbLogin()">
+              {{ 'FACEBOOK_SIGNIN' | translate }}
+            </button>
+          </div>
+        	<div class="col-xs-B-12 my-animation">
+  	      	<button class="button button-light button-block icon-left ion-social-twitter" ng-click="twitterLogin()">
+  	        	{{ 'TWITTER_SIGNIN' | translate }}
+  	      	</button>
+        	</div>
+          <div class="col-xs-B-12 my-animation">
+            <button class="button button-light button-block icon-left ion-social-googleplus-outline" ng-click="googleLogin()">
+              {{ 'GOOGLE_SIGNIN' | translate }}
+            </button>
+          </div>
+          <div class="col-xs-B-12 my-animation">
+            <button class="button button-light button-block icon-left ion-person-add" ng-click="userRegister()">
+              {{ 'USER_REGISTER_BUTTON' | translate }}
+            </button>
+          </div>
+       </div>
+     
+     
+     </div>
+     
+</ion-content>
+</ion-view>
